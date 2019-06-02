@@ -1,0 +1,46 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    maven { url 'http://maven.parim.net/nexus/content/groups/public/' }
+    maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1'
+    runtimeOnly 'mysql:mysql-connector-java'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compile 'com.alibaba:druid:1.0.14'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    compile ('com.alibaba:fastjson:1.2.31')
+    compile ('redis.clients:jedis')
+
+    compile ('org.springframework.boot:spring-boot-starter-data-redis')
+    compile ('org.apache.commons:commons-lang3:3.5')
+    compile ('commons-io:commons-io:2.5')
+    compile ( 'org.springframework.boot:spring-boot-starter-cache')
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.0.1.Final'
+
+    compile group: 'org.hibernate', name: 'hibernate-envers', version: '5.0.1.Final'
+
+    compile('com.fasterxml.jackson.datatype:jackson-datatype-hibernate5:2.8.11')
+
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+    compile('org.apache.commons:commons-lang3:3.5')
+
+    compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+
+}
+
+

@@ -27,6 +27,7 @@ dependencies {
     compile ('redis.clients:jedis')
 
     compile ('org.springframework.boot:spring-boot-starter-data-redis')
+    
     compile ('org.apache.commons:commons-lang3:3.5')
     compile ('commons-io:commons-io:2.5')
     compile ( 'org.springframework.boot:spring-boot-starter-cache')
